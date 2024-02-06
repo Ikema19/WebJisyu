@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>自習教室一覧(設定)</title>
+  <style>
+    table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: top;
+  padding: 10px;
+  font-weight: bold;
+}
+
+thead,
+tfoot {
+  background-color: rgb(228 240 245);
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+td:last-of-type {
+  text-align: center;
+}
+
+tbody > tr:nth-of-type(even) {
+  background-color: rgb(237 238 242);
+}
+
+tfoot th {
+  text-align: right;
+}
+
+tfoot td {
+  font-weight: bold;
+}
+
+  </style>
+</head>
+<body>
+    <form action="../set" method="post">
+
+        <table>
+            <caption>
+                本日の自習教室一覧(設定)
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">時限</th>
+                <th scope="col">教室</th>
+                <th scope="col">備考</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">１限</th>
+                <td><input type="text" name value='<%=jisyu[0]["kyousitu"] %>' ></td>
+                <td><input type="text" value='<%=jisyu[0]["bikou"] %>' ></td>
+              </tr>
+              <tr>
+                <th scope="row">２限</th>
+                <td><input type="text" value='<%=jisyu[1]["kyousitu"] %>' ></td>
+                <td><input type="text" value='<%=jisyu[1]["bikou"] %>' ></td>
+              </tr>
+              <tr>
+                <th scope="row">昼食</th>
+                <td><input type="text" value='<%=jisyu[6]["kyousitu"] %>' ></td>
+                <td><input type="text" value='<%=jisyu[6]["bikou"] %>' ></td>
+              </tr>
+              <tr>
+                <th scope="row">３限</th>
+                <td><input type="text" value='<%=jisyu[2]["kyousitu"] %>' ></td>
+                <td><input type="text" value='<%=jisyu[2]["bikou"] %>' ></td>
+              </tr>
+              <tr>
+                <th scope="row">４限</th>
+                <td><input type="text" value='<%=jisyu[3]["kyousitu"] %>' ></td>
+                <td><input type="text" value='<%=jisyu[3]["bikou"] %>' ></td>
+              </tr>
+              <tr>
+                <th scope="row">５限</th>
+                <td><input type="text" value='<%=jisyu[4]["kyousitu"] %>' ></td>
+                <td><input type="text" value='<%=jisyu[4]["bikou"] %>' ></td>
+              </tr>
+              <tr>
+                <th scope="row">６限</th>
+                <td><input type="text" value='<%=jisyu[5]["kyousitu"] %>' ></td>
+                <td><input type="text" value='<%=jisyu[5]["bikou"] %>' ></td>
+              </tr>
+              <tr>
+                <th scope="row">夜間１</th>
+                <td><input type="text" value='<%=jisyu[7]["kyousitu"] %>' ></td>
+                <td><input type="text" value='<%=jisyu[7]["bikou"] %>' ></td>
+              </tr>
+              <tr>
+                <th scope="row">夜間２,３</th>
+                <td><input type="text" value='<%=jisyu[8]["kyousitu"] %>' ></td>
+                <td><input type="text" value='<%=jisyu[8]["bikou"] %>' ></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <input type="submit" value="登録">
+    </form>
+</body>
+</html>
